@@ -4,9 +4,82 @@
   переключая тему
 */
 
+:root.theme_dark {
+  --main-font: 'IBM Plex mono';
+  --main-font-size: 18px;
+  --main-line-height: 130%;
+
+  --bg-color: #000028;
+  --text-color: #F1B2CE;
+  --title-color: #000028;
+  --accent-color: #FF0070;
+  --contrast-color: #DB00FF;
+}
+
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --text-color: #F1B2CE;
+  --title-color: #000028;
+  --accent-color: #FF0070;
+  --contrast-color: #DB00FF;
+}
+
+.page.theme_dark .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.page.theme_dark .header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
+.page.theme_dark .decor-element {
+  display: flex;
+}
+
+.page.theme_dark .decor-element::after {
+  display: inline-block;
+}
+
+.page.theme_dark .title-decor {
+  color: var(--title-color);
+  background-color: var(--accent-color);
+}
+
+.page.theme_dark .section__title {
+  color: var(--accent-color);
+}
+
+.page.theme_dark .link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.page.theme_dark .header::after,
+.page.theme_dark .footer::before {
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.page.theme_dark .header::before,
+.page.theme_dark .footer::after {
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+/*:focus-visible */
+.page.theme_dark .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.page.theme_dark .link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+/*:hover*/
+.page.theme_dark .header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.40);
 }

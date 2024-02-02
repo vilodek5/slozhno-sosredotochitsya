@@ -4,9 +4,156 @@
   переключая тему
 */
 
+:root.theme_light {
+  /* Переменные светлой темы */
+  --bg-color: #FFF1F7;
+  --text-color: #353430;
+  --title-color: #353430;
+  --accent-color: #FF8DCB;
+  --contrast-color: #FFC2E6;
+  --shadow-color: #FF0070;
+}
+
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-image: url(../images/cover-image-light.png);
+  --bg-color: #FFF1F7;
+  --text-color: #353430;
+  --title-color: #353430;
+  --accent-color: #FF8DCB;
+  --contrast-color: #FFC2E6;
+  --shadow-color: #FF0070;
+}
+
+.page.theme_light .decor-element {
+  display: none;
+}
+
+.page.theme_light .header__title {
+  text-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+.page.theme_light .header__theme-menu-button {
+  color: var(--text-color);
+}
+
+.page.theme_light .header__theme-menu-button_active {
+  outline: 1px solid var(--text-color);
+}
+
+.page.theme_light .header::after,
+.page.theme_light .footer::before {
+  border-left: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page.theme_light .header::before,
+.page.theme_light .footer::after {
+  border-top: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
+}
+
+.page.theme_light .section__title {
+  color: var(--text-color);
+}
+
+.page.theme_light .footer__title {
+  text-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+/*Стили различных состояний*/
+/*:focus-visible */
+.page.theme_light .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page.theme_light .link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+/*:hover*/
+.page.theme_light .header__theme-menu-button:hover {
+  outline: 1px solid rgba(50, 49, 45, 0.40);
+}
+
+.page.theme_light .link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Дублируем переменные светлой темы */
+    --bg-color: #FFF1F7;
+    --text-color: #353430;
+    --title-color: #000028;
+    --accent-color: #FF8DCB;
+    --contrast-color: #FFC2E6;
+    --shadow-color: #FF0070;
+  }
+
+  .page {
+    background-image: url(../images/cover-image-light.png);
+  }
+
+  .decor-element {
+    display: none;
+  }
+
+  .header__title {
+    text-shadow: 4px 4px 0 var(--shadow-color);
+  }
+
+  .header__theme-menu-button {
+    color: var(--text-color);
+  }
+  
+  .header__theme-menu-button_active {
+    outline: 1px solid var(--text-color);
+  }
+
+  .section__title {
+    color: var(--text-color);
+  }
+
+  .title-decor {
+    color: var(--text-color);
+  }
+
+  .header::after,
+  .footer::before {
+    border-left: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  .header::before,
+  .footer::after {
+    border-top: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+  }
+
+  .footer__title {
+    text-shadow: 2px 2px 0px var(--shadow-color);
+  }
+
+  /*Стили различных состояний*/
+  /*:focus-visible */
+  .header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  .link:focus-visible {
+    outline: 1px solid var(--text-color);
+  }
+  
+  /*:hover*/
+  .header__theme-menu-button:hover {
+    outline: 1px solid rgba(50,49,45, 0.40);
+  }
+
+  .link:hover {
+    border-bottom: 1px solid var(--text-color);
+  }
 }
