@@ -11,5 +11,6 @@
   --text-color: #F1B2CE;
   --title-color: #000028;
   --accent-color: #FF0070;
-  --contrast-color: #DB00FF;
+  --main-title-contrast-color: #DB00FF;
+  --main-title-shadow-color: #FF0070;
 }

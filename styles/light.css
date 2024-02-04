@@ -4,16 +4,6 @@
   переключая тему
 */
 
-:root.theme_light {
-  /* Переменные светлой темы */
-  --bg-color: #FFF1F7;
-  --text-color: #353430;
-  --title-color: #353430;
-  --accent-color: #FF8DCB;
-  --contrast-color: #FFC2E6;
-  --shadow-color: #FF0070;
-}
-
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -24,8 +14,8 @@
   --text-color: #353430;
   --title-color: #353430;
   --accent-color: #FF8DCB;
-  --contrast-color: #FFC2E6;
-  --shadow-color: #FF0070;
+  --main-title-contrast-color: #FFC2E6;
+  --main-title-shadow-color: #FF0070;
 }
 
 .page.theme_light .decor-element {
@@ -33,7 +23,8 @@
 }
 
 .page.theme_light .header__title {
-  text-shadow: 4px 4px 0 var(--shadow-color);
+  color: var(--main-title-contrast-color);
+  text-shadow: 4px 4px 0 var(--main-title-shadow-color);
 }
 
 .page.theme_light .header__theme-menu-button {
@@ -58,10 +49,6 @@
 
 .page.theme_light .section__title {
   color: var(--text-color);
-}
-
-.page.theme_light .footer__title {
-  text-shadow: 2px 2px 0px var(--shadow-color);
 }
 
 /*Стили различных состояний*/
@@ -90,8 +77,8 @@
     --text-color: #353430;
     --title-color: #000028;
     --accent-color: #FF8DCB;
-    --contrast-color: #FFC2E6;
-    --shadow-color: #FF0070;
+    --main-title-contrast-color: #FFC2E6;
+    --main-title-shadow-color: #FF0070;
   }
 
   .page {
@@ -100,10 +87,6 @@
 
   .decor-element {
     display: none;
-  }
-
-  .header__title {
-    text-shadow: 4px 4px 0 var(--shadow-color);
   }
 
   .header__theme-menu-button {
@@ -134,10 +117,6 @@
     border-right: 1px solid var(--text-color);
   }
 
-  .footer__title {
-    text-shadow: 2px 2px 0px var(--shadow-color);
-  }
-
   /*Стили различных состояний*/
   /*:focus-visible */
   .header__theme-menu-button:focus-visible {
@@ -150,7 +129,7 @@
   
   /*:hover*/
   .header__theme-menu-button:hover {
-    outline: 1px solid rgba(50,49,45, 0.40);
+    outline: 1px solid rgba(50, 49, 45, 0.40);
   }
 
   .link:hover {
